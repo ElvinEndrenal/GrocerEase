@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_margin="20sp"
         >
 
         <TextView
@@ -20,7 +21,6 @@
             android:layout_height="54dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="23dp"
             android:layout_marginTop="29dp"
             android:gravity="top"
             android:text="GrocerEase"
@@ -30,9 +30,10 @@
             android:id="@+id/addButton"
             android:layout_width="60dp"
             android:layout_height="65dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/black"/>
+            android:backgroundTint="@color/black"
+            android:text="+" />
 
         <Button
             android:id="@+id/aboutButton"
@@ -49,17 +50,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:layout_marginTop="80dp"
+        android:layout_margin="20dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="26sp"
             android:layout_marginRight="29dp"
             android:text="Sort By" />
 
         <EditText
-            android:layout_width="170dp"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Search"
             android:textSize="14dp" />
@@ -72,14 +74,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout2"
         android:layout_alignParentBottom="true"
-        android:layout_margin="26sp"
+        android:layout_margin="20sp"
         android:layout_marginTop="325dp"
         android:layout_marginBottom="362dp"
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/outputView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+
     </LinearLayout>
 
 </RelativeLayout>
