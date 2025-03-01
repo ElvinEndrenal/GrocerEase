@@ -79,12 +79,14 @@
         android:layout_marginBottom="362dp"
         android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/outputView"
+        <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
+            android:layout_height="wrap_content"
+            />
 
     </LinearLayout>
+
+   <!--- ADD VIEW -->
 
 </RelativeLayout>

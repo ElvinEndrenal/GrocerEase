@@ -3,6 +3,7 @@ package com.example.grocerease;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button addButton, aboutButton;
     EditText search;
-    RecyclerView outputView;
+    ListView listView;
 
 
     @Override
@@ -32,6 +33,6 @@ public class MainActivity extends AppCompatActivity {
         addButton = findViewById(R.id.addButton);
         aboutButton = findViewById(R.id.aboutButton);
         search = findViewById(R.id.search);
-        outputView = findViewById(R.id.outputView);
+        listView = findViewById(R.id.listView);
     }
 }
