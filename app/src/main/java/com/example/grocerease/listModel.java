@@ -48,10 +48,7 @@ public class listModel {
 
     @Override
     public String toString() {
-        return "listModel{" +
-                "groceryName='" + groceryName + '\'' +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                '}';
+        return
+                "\n" + groceryName + "\n" + "PHP " + price + "\n" + "Quantity: " + quantity + "\n" ;
     }
 }

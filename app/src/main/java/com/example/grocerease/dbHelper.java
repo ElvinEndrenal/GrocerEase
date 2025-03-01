@@ -64,6 +64,9 @@ public class dbHelper extends SQLiteOpenHelper {
                 String groceryName = cursor.getString(1);
                 int groceryPrice = cursor.getInt(2);
                 int groceryQuantity = cursor.getInt((3));
+
+                listModel listmodel = new listModel(groceryID, groceryName, groceryPrice, groceryQuantity);
+                returnList.add(listmodel);
             }
         } else {
             //none
