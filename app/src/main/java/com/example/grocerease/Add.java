@@ -46,30 +46,7 @@ public class Add extends AppCompatActivity {
         });
 
         AddHere.setOnClickListener(view -> {
-//            try {
-//                listModel listmodel = new listModel(
-//                        itemID,
-//                        groceryName.getText().toString(),
-//                        (int) Float.parseFloat(groceryPrice.getText().toString()),
-//                        Integer.parseInt(groceryQuan.getText().toString())
-//
-//                );
-//
-//                if (itemID == -1) {
-//                    db.AddOne(listmodel);
-//                    Toast.makeText(Add.this, "Item Added", Toast.LENGTH_SHORT).show();
-//                } else {
-//                    db.UpdateOne(listmodel);
-//                    Toast.makeText(Add.this, "Item Updated", Toast.LENGTH_SHORT).show();
-//                }
-//
-//                startActivity(new Intent(Add.this, MainActivity.class));
-//            } catch (Exception e) {
-//                Toast.makeText(Add.this, "Error Saving", Toast.LENGTH_SHORT).show();
-//            }
-
             listModel listmodel;
-
             try {
                 listmodel = new listModel(-1, groceryName.getText().toString(), Integer.parseInt(groceryPrice.getText().toString()),
                         Integer.parseInt(groceryQuan.getText().toString()));
