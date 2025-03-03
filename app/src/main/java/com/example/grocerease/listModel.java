@@ -49,6 +49,6 @@ public class listModel {
     @Override
     public String toString() {
         return
-                "\n" + groceryName + "\n" + "PHP " + price + "\n" + "Quantity: " + quantity + "\n" ;
+                "\n" + groceryName + "\n" + "PHP " + String.format("%,.2f", price) + "\n" + "Quantity: " + quantity + "\n" ;
     }
 }

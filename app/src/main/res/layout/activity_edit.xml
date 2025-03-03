@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Add Grocery"
+        android:text="Edit Grocery"
         android:textAlignment="center"
         android:textSize="40sp" />
 
@@ -30,14 +30,14 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/groceryName"
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
             android:paddingLeft="10sp" />
 
         <EditText
-            android:id="@+id/groceryPrice"
+            android:id="@+id/editPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Price"
@@ -45,7 +45,7 @@
             android:layout_marginTop="15dp"/>
 
         <EditText
-            android:id="@+id/groceryQuan"
+            android:id="@+id/editQuan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Quantity"
@@ -63,20 +63,19 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-
         <Button
-            android:id="@+id/Back"
+            android:id="@+id/BackHere"
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="Back"
-            android:layout_marginRight="30dp"/>
+            android:layout_marginRight="30dp"
+            android:text="Back" />
 
         <Button
-            android:id="@+id/AddHere"
+            android:id="@+id/ChangeHere"
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="Add"/>
-
+            android:text="Change"
+            />
     </LinearLayout>
 
 

@@ -53,23 +53,18 @@ public class dbHelper extends SQLiteOpenHelper {
     public List<listModel> getAll(){
         List<listModel> returnList = new ArrayList<>();
 
-        String queryString = "SELECT * FROM " + GROCERY_TABLE;
+        String queryString = "SELECT * FROM " + GROCERY_TABLE + " ORDER BY " + COLUMN_GROCERY_NAME + " COLLATE NOCASE ASC";
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.rawQuery(queryString, null);
 
-        if (cursor.moveToFirst()){
-            while (cursor.moveToNext()){
-                int groceryID = cursor.getInt(0);
-                String groceryName = cursor.getString(1);
-                int groceryPrice = cursor.getInt(2);
-                int groceryQuantity = cursor.getInt((3));
-
-                listModel listmodel = new listModel(groceryID, groceryName, groceryPrice, groceryQuantity);
-                returnList.add(listmodel);
-            }
-        } else {
-            //none
+        while(cursor.moveToNext()){
+            returnList.add(new listModel(
+               cursor.getInt(0),
+               cursor.getString(1),
+               cursor.getInt(2),
+               cursor.getInt(3)
+            ));
         }
 
         db.close();

@@ -32,7 +32,6 @@ public class Add extends AppCompatActivity {
             return insets;
         });
 
-
         groceryName = findViewById(R.id.groceryName);
         groceryPrice = findViewById(R.id.groceryPrice);
         groceryQuan = findViewById(R.id.groceryQuan);
@@ -40,33 +39,51 @@ public class Add extends AppCompatActivity {
         Back = findViewById(R.id.Back);
 
 
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+
+        Back.setOnClickListener(view -> {
+            Intent intent1 = new Intent(Add.this, MainActivity.class);
+            startActivity(intent1);
+        });
+
+        AddHere.setOnClickListener(view -> {
+//            try {
+//                listModel listmodel = new listModel(
+//                        itemID,
+//                        groceryName.getText().toString(),
+//                        (int) Float.parseFloat(groceryPrice.getText().toString()),
+//                        Integer.parseInt(groceryQuan.getText().toString())
+//
+//                );
+//
+//                if (itemID == -1) {
+//                    db.AddOne(listmodel);
+//                    Toast.makeText(Add.this, "Item Added", Toast.LENGTH_SHORT).show();
+//                } else {
+//                    db.UpdateOne(listmodel);
+//                    Toast.makeText(Add.this, "Item Updated", Toast.LENGTH_SHORT).show();
+//                }
+//
+//                startActivity(new Intent(Add.this, MainActivity.class));
+//            } catch (Exception e) {
+//                Toast.makeText(Add.this, "Error Saving", Toast.LENGTH_SHORT).show();
+//            }
+
+            listModel listmodel;
+
+            try {
+                listmodel = new listModel(-1, groceryName.getText().toString(), Integer.parseInt(groceryPrice.getText().toString()),
+                        Integer.parseInt(groceryQuan.getText().toString()));
+                db.AddOne(listmodel);
+                Toast.makeText(Add.this, "Grocery Added", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Add.this, MainActivity.class);
                 startActivity(intent);
+
+            } catch (Exception e){
+                Toast.makeText(Add.this, "Error Adding", Toast.LENGTH_SHORT).show();
             }
         });
 
-        AddHere.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                listModel listmodel;
-
-                try {
-                    listmodel = new listModel(-1, groceryName.getText().toString(), Integer.parseInt(groceryPrice.getText().toString()),
-                            Integer.parseInt(groceryQuan.getText().toString()));
-                    db.AddOne(listmodel);
-                    Toast.makeText(Add.this, "Grocery Added", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Add.this, MainActivity.class);
-                    startActivity(intent);
-
-                } catch (Exception e){
-                    Toast.makeText(Add.this, "Error Adding", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
 
     }
 }
