@@ -57,7 +57,6 @@ public class edit extends AppCompatActivity {
                             editName.getText().toString(),
                             (int) Float.parseFloat(editPrice.getText().toString()),
                             Integer.parseInt(editQuan.getText().toString())
-
                     );
 
                     if (itemID == -1) {
