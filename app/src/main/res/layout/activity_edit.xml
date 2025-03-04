@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Add">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Edit Grocery"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_margin="30dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edit name"
+            android:paddingLeft="10sp" />
+
+        <EditText
+            android:id="@+id/editPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edit price"
+            android:paddingLeft="10sp"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/editQuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edit quantity"
+            android:paddingLeft="10sp"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_margin="20dp"
+        android:layout_marginTop="-199dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BackHere"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="30dp"
+            android:text="Back" />
+
+        <Button
+            android:id="@+id/ChangeHere"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Change"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
